@@ -3,6 +3,11 @@
   margin: 0 auto;
   background-color: floralwhite;
 }
-img {
-  height: 300px;
+.card {
+  > div {
+    height: 100px;
+    width: 100px;
+    border: 1px solid #000;
+    background-size: cover;
+  }
 }

@@ -12,8 +12,8 @@ function App() {
     return [...Array(3).keys()].sort(() => .5 - Math.random());
   }
 
-  function updateScore(img) {
-    if (memory.includes(img)) {
+  function updateScore(card) {
+    if (memory.includes(card)) {
       setScores([0, scores[1]]);
       setMemory([]);
     } else {
@@ -21,25 +21,26 @@ function App() {
       newScore > scores[1] ?
         setScores([newScore, newScore]) :
         setScores([newScore, scores[1]]);
-      setMemory([...memory, img]);
+      setMemory([...memory, card]);
     }
   }
 
   function handleClick(e) {
-    updateScore(e.target.className);
+    const cardIndex = e.target.closest('li').className.split(' ')[1];
+    updateScore(cardIndex);
     setOrder(createOrder());
   }
 
   useEffect(() => {
-    const imgs = document.querySelectorAll('img');
+    const cards = document.querySelectorAll('.card');
 
-    imgs.forEach((img) => {
-      img.addEventListener('click', handleClick);
+    cards.forEach((card) => {
+      card.addEventListener('click', handleClick);
     })
 
     return() => {
-      imgs.forEach((img) => {
-        img.removeEventListener('click', handleClick);
+      cards.forEach((card) => {
+        card.removeEventListener('click', handleClick);
       })
     }
   }, [handleClick]);
