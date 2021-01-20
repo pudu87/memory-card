@@ -24,7 +24,8 @@ function Cards(props) {
   })
 
   return (
-    <ul>
+    <ul 
+      className='cards'>
       {listItems}
     </ul>
   )
