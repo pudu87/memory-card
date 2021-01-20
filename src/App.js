@@ -9,7 +9,7 @@ function App() {
   const [order, setOrder] = useState(createOrder());
 
   function createOrder() {
-    return [...Array(3).keys()].sort(() => .5 - Math.random());
+    return [...Array(12).keys()].sort(() => .5 - Math.random());
   }
 
   function updateScore(card) {
