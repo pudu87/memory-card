@@ -3,7 +3,7 @@
 // GENERAL
 
 .App {
-  width: 800px;
+  width: 950px;
   margin: 0 auto;
   background: url('./img/forest.jpeg');
 }
@@ -51,7 +51,7 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
-  padding: 20px;
+  padding: 20px 100px;
 }
 .card {
   display: grid;
@@ -78,4 +78,12 @@ header {
 }
 .card:hover {
   cursor: pointer;
+  background-color: rgba(255,255,255,.4);
+}
+.card:active {
+  scale: 1.02;
+  background-color: rgba(255,255,255,.7);
+}
+._6 p {
+  font-size: 20px;
 }

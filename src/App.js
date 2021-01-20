@@ -26,7 +26,7 @@ function App() {
   }
 
   function handleClick(e) {
-    const cardIndex = e.target.closest('li').className.split(' ')[1];
+    const cardIndex = e.target.closest('li').className.split(' _')[1];
     updateScore(cardIndex);
     setOrder(createOrder());
   }

@@ -32,7 +32,7 @@ function Cards(props) {
     return (
       <li 
         key={index.toString()}
-        className={`card ${index.toString()}`}>
+        className={`card _${index.toString()}`}>
         <div 
           style={ { backgroundImage: `url(${images[index].src})` } } >
         </div>
